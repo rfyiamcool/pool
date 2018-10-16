@@ -1,12 +1,13 @@
 # pool
 
-通用连接池，增加了几个连接池功能:
+common connnect pool, difference with [fatih/pool](github.com/fatih/pool)
 
-* MaxIdle
+* More adaptation
+* Add MaxIdle threshold
 * ActiveCheck()
 * CurConnCount Lock
 
-参考代码: https://github.com/silenceper/pool
+some code from https://github.com/silenceper/pool
 
 ## Usage
 
