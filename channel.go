@@ -164,7 +164,6 @@ func (c *channelPool) Get() (interface{}, error) {
 
 			if c.ping != nil {
 				if err := c.Ping(wrapConn.conn); err != nil {
-					fmt.Println("conn is not able to be connected: ", err)
 					continue
 				}
 			}
@@ -176,7 +175,6 @@ func (c *channelPool) Get() (interface{}, error) {
 				c.decrCurCount()
 
 				time.Sleep(20 * time.Millisecond)
-				fmt.Println("conn pool full, sleep 20 ms")
 				continue
 			}
 			conn, err := c.factory()

@@ -20,8 +20,8 @@ close := func(v interface{}) error { return v.(net.Conn).Close() }
 
 poolConfig := &pool.PoolConfig{
 	InitialCap: 5,
-	MaxActive:  200,
-	MaxIdle:    50,
+	MaxActive:  200, // max open conn
+	MaxIdle:    50,  // after idle timeout expired, keep idle conn
 	Factory:    factory,
 	Close:      close,
 
